@@ -62,7 +62,7 @@ export default function Hero() {
             playsInline
             className="absolute inset-0 h-full w-full object-cover"
           >
-            <source src="/landing-page.MOV" />
+            <source src="public/landing-page.MOV" />
           </video>
 
           {/* OVERLAY */}
