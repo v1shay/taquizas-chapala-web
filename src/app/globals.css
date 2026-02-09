@@ -2,17 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --bg: #0e0e0e;
-  --accent: #c79a3b;
-  --text-soft: rgba(255,255,255,0.78);
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
+/* sanity check */
 body {
-  background: var(--bg);
-  color: white;
+  background-color: black;
 }
