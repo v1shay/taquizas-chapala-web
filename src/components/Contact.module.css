@@ -1,0 +1,88 @@
+.section {
+  background: #fffaf3;
+  color: #1a120c;
+  padding: 5.5rem 0 7rem;
+}
+
+.inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2.25rem;
+}
+
+.content {
+  border-radius: 28px;
+  padding: 3.5rem 2.75rem;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow:
+    0 24px 64px rgba(26, 18, 12, 0.08),
+    0 1px 0 rgba(255, 255, 255, 0.65) inset;
+}
+
+.title {
+  font-family: "AbrilFatface", serif;
+  font-size: clamp(2.2rem, 3.2vw, 3rem);
+  line-height: 1.1;
+  text-align: center;
+}
+
+.people {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.25rem;
+  margin-top: 2.5rem;
+}
+
+.person {
+  border-radius: 22px;
+  padding: 1.75rem 1.6rem;
+  background: rgba(255, 240, 232, 0.55);
+  border: 1px solid rgba(26, 18, 12, 0.06);
+}
+
+.name {
+  font-family: "DMSerif", serif;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 0.8rem;
+  opacity: 0.85;
+}
+
+.phone {
+  display: inline-block;
+  margin-top: 0.9rem;
+
+  font-family: "ElGrosa", serif;
+  font-size: clamp(1.8rem, 2.6vw, 2.25rem);
+  letter-spacing: 0.02em;
+
+  color: inherit;
+  text-decoration: none;
+
+  padding: 0.35rem 0.2rem;
+  border-radius: 14px;
+  transition: background 160ms ease, transform 160ms ease;
+}
+
+.phone:hover {
+  background: rgba(255, 255, 255, 0.65);
+}
+
+.phone:active {
+  transform: translateY(1px);
+}
+
+.phone:focus-visible {
+  outline: 2px solid rgba(240, 107, 91, 0.5);
+  outline-offset: 3px;
+}
+
+@media (max-width: 760px) {
+  .content {
+    padding: 2.6rem 1.6rem;
+  }
+
+  .people {
+    grid-template-columns: 1fr;
+  }
+}

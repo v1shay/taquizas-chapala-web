@@ -1,0 +1,148 @@
+.section {
+  /* Continue from the hero peach/orange palette into warm white */
+  background: linear-gradient(
+    180deg,
+    #ff9568 0%,
+    #ffd1b7 22%,
+    #fff2e8 56%,
+    #fffaf3 100%
+  );
+  color: #1a120c;
+  padding: 6.5rem 0 5.5rem;
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2.25rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4.75rem;
+}
+
+.title {
+  font-family: "ElGrosa", serif;
+  font-size: clamp(3.25rem, 5.5vw, 5rem);
+  letter-spacing: 0.04em;
+  line-height: 0.95;
+}
+
+.subheader {
+  margin: 1.1rem auto 0;
+  max-width: 52rem;
+
+  font-family: "DMSerif", serif;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 3.75rem;
+}
+
+.block {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 3.25rem;
+  align-items: center;
+
+  padding: 2.6rem 2.4rem;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.65);
+  box-shadow:
+    0 24px 64px rgba(26, 18, 12, 0.08),
+    0 1px 0 rgba(255, 255, 255, 0.6) inset;
+  backdrop-filter: blur(10px);
+}
+
+.blockReverse {
+  grid-template-columns: 0.95fr 1.05fr;
+}
+
+.blockReverse .textCol {
+  order: 2;
+}
+
+.blockReverse .imageCol {
+  order: 1;
+}
+
+.textCol {
+  min-width: 0;
+}
+
+.blockTitle {
+  font-family: "AbrilFatface", serif;
+  font-size: clamp(1.9rem, 2.6vw, 2.4rem);
+  letter-spacing: 0.06em;
+}
+
+.list {
+  list-style: none;
+  margin-top: 1.15rem;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.listItem {
+  font-family: "DMSerif", serif;
+  font-size: 1.08rem;
+  line-height: 1.5;
+  opacity: 0.92;
+  position: relative;
+  padding-left: 1.15rem;
+}
+
+.listItem::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0.55;
+}
+
+.imageCol {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagePlaceholder {
+  width: 100%;
+  max-width: 440px;
+  aspect-ratio: 4 / 3;
+
+  border-radius: 22px;
+  background:
+    linear-gradient(135deg, rgba(26, 18, 12, 0.06), rgba(26, 18, 12, 0.02));
+  border: 1px solid rgba(26, 18, 12, 0.08);
+}
+
+@media (max-width: 960px) {
+  .block,
+  .blockReverse {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2.1rem 1.6rem;
+  }
+
+  .blockReverse .textCol,
+  .blockReverse .imageCol {
+    order: unset;
+  }
+
+  .imagePlaceholder {
+    max-width: 520px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .section {
+    scroll-behavior: auto;
+  }
+}
