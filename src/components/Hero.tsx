@@ -4,40 +4,57 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen bg-black text-white overflow-hidden">
-      <div className="grid min-h-screen grid-cols-1 md:grid-cols-2">
+    <section className="relative min-h-screen overflow-hidden text-white">
+      {/* BACKGROUND GRADIENT */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#ffb199] via-[#ff9a8b] to-[#ff6a88]" />
+
+      <div className="relative z-10 grid min-h-screen grid-cols-1 md:grid-cols-2">
 
         {/* LEFT — TEXT */}
         <motion.div
-          initial={{ opacity: 0, x: -60 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.9, ease: "easeOut" }}
-          className="flex flex-col justify-center px-10 md:px-24 z-10"
+          initial={{ opacity: 0, y: 60 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.1, ease: "easeOut" }}
+          className="flex flex-col justify-center px-12 md:px-28"
         >
-          <span className="text-xs tracking-[0.35em] text-neutral-400 uppercase mb-6">
+          <motion.span
+            initial={{ opacity: 0, letterSpacing: "0.6em" }}
+            animate={{ opacity: 1, letterSpacing: "0.35em" }}
+            transition={{ delay: 0.3, duration: 1 }}
+            className="text-xs uppercase text-white/80 mb-6"
+          >
             Taquizas
-          </span>
+          </motion.span>
 
-          <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-            Estilo Chapala
-          </h1>
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.45, duration: 1 }}
+            className="text-6xl md:text-8xl font-bold leading-[0.95]"
+          >
+            Estilo
+            <br />
+            Chapala
+          </motion.h1>
 
-          <p className="mt-6 max-w-md text-lg text-neutral-400">
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.8, duration: 1 }}
+            className="mt-8 max-w-md text-lg md:text-xl text-white/85"
+          >
             Authentic taco catering for unforgettable events.
-          </p>
+          </motion.p>
         </motion.div>
 
         {/* RIGHT — VIDEO */}
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1.2, delay: 0.2 }}
+          initial={{ scale: 1.1, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 1.4, ease: "easeOut" }}
           className="relative hidden md:block"
         >
-          {/* TEMP GRADIENT FALLBACK (guaranteed to render) */}
-          <div className="absolute inset-0 bg-gradient-to-br from-neutral-900 via-black to-neutral-800" />
-
-          {/* VIDEO (will layer on top if supported) */}
+          {/* VIDEO */}
           <video
             autoPlay
             muted
@@ -48,7 +65,8 @@ export default function Hero() {
             <source src="/landing-page.MOV" />
           </video>
 
-          <div className="absolute inset-0 bg-black/35" />
+          {/* OVERLAY */}
+          <div className="absolute inset-0 bg-black/25" />
         </motion.div>
 
       </div>
