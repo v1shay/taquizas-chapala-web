@@ -7,31 +7,24 @@ export default function Hero() {
     <section className="relative min-h-screen bg-black text-white overflow-hidden">
       <div className="grid min-h-screen grid-cols-1 md:grid-cols-2">
 
-        {/* LEFT — BRANDING */}
+        {/* LEFT — TEXT */}
         <motion.div
-          initial={{ opacity: 0, x: -40 }}
+          initial={{ opacity: 0, x: -60 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.9, ease: "easeOut" }}
-          className="flex flex-col justify-center px-8 md:px-20"
+          className="flex flex-col justify-center px-10 md:px-24 z-10"
         >
-          {/* Logo placeholder */}
-          <div className="mb-6 text-xs tracking-[0.3em] text-neutral-400 uppercase">
+          <span className="text-xs tracking-[0.35em] text-neutral-400 uppercase mb-6">
             Taquizas
-          </div>
+          </span>
 
-          <h1 className="text-5xl md:text-6xl font-bold leading-tight">
+          <h1 className="text-5xl md:text-7xl font-bold leading-tight">
             Estilo Chapala
           </h1>
 
-          <p className="mt-4 max-w-md text-lg text-neutral-400">
+          <p className="mt-6 max-w-md text-lg text-neutral-400">
             Authentic taco catering for unforgettable events.
           </p>
-
-          <div className="mt-8">
-            <span className="inline-block text-sm tracking-widest text-neutral-500">
-              Scroll to explore
-            </span>
-          </div>
         </motion.div>
 
         {/* RIGHT — VIDEO */}
@@ -41,6 +34,10 @@ export default function Hero() {
           transition={{ duration: 1.2, delay: 0.2 }}
           className="relative hidden md:block"
         >
+          {/* TEMP GRADIENT FALLBACK (guaranteed to render) */}
+          <div className="absolute inset-0 bg-gradient-to-br from-neutral-900 via-black to-neutral-800" />
+
+          {/* VIDEO (will layer on top if supported) */}
           <video
             autoPlay
             muted
@@ -48,10 +45,9 @@ export default function Hero() {
             playsInline
             className="absolute inset-0 h-full w-full object-cover"
           >
-            <source src="/landing-page.MOV" type="video/quicktime" />
+            <source src="/landing-page.MOV" />
           </video>
 
-          {/* Dark overlay for readability */}
           <div className="absolute inset-0 bg-black/35" />
         </motion.div>
 
