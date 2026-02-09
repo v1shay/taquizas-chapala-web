@@ -1,5 +1,15 @@
-import Hero from "../components/Hero";
+import "./globals.css";
 
-export default function Home() {
-  return <Hero />;
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en">
+      <body className="min-h-screen bg-red-500">
+        {children}
+      </body>
+    </html>
+  );
 }
