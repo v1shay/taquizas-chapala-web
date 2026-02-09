@@ -1,18 +1,15 @@
-"use client";
-
-import { motion } from "framer-motion";
+import Hero from "../components/Hero";
+import Menu from "../components/Menu";
+import Gallery from "../components/Gallery";
+import Contact from "../components/Contact";
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex items-center justify-center bg-black">
-      <motion.h1
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="text-5xl font-bold tracking-tight"
-      >
-        Taquizas Estilo Chapala 🌮
-      </motion.h1>
+    <main>
+      <Hero />
+      <Menu />
+      <Gallery />
+      <Contact />
     </main>
   );
 }
