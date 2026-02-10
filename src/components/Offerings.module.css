@@ -1,19 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&family=Fredoka+One&family=Yatra+One&family=Rakkas&family=Corben:wght@400;700&display=swap");
 
-/* ===== SNAP SCROLL FIX ===== */
-.section {
-  scroll-snap-align: start;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-}
-
 /* ===== SECTION ===== */
 .section {
   background: linear-gradient(
@@ -242,10 +228,6 @@ body {
 @media (max-width: 960px) {
   .blocks {
     grid-template-columns: 1fr;
-  }
-
-  body {
-    scroll-snap-type: none;
   }
 
   .cartDock {

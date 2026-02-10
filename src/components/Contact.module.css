@@ -1,11 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Corben:wght@400;700&display=swap");
+
 .section {
   background: #fffaf3;
   color: #1a120c;
   padding: 5.5rem 0 7rem;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .inner {
   max-width: 1000px;
+  width: 100%;
   margin: 0 auto;
   padding: 0 2.25rem;
 }
@@ -20,9 +27,11 @@
 }
 
 .title {
-  font-family: "AbrilFatface", serif;
+  font-family: "Corben", serif;
+  font-weight: 700;
   font-size: clamp(2.2rem, 3.2vw, 3rem);
-  line-height: 1.1;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
   text-align: center;
 }
 
@@ -41,10 +50,11 @@
 }
 
 .name {
-  font-family: "DMSerif", serif;
+  font-family: "Corben", serif;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.22em;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   opacity: 0.85;
 }
 
@@ -52,9 +62,10 @@
   display: inline-block;
   margin-top: 0.9rem;
 
-  font-family: "ElGrosa", serif;
+  font-family: "Corben", serif;
+  font-weight: 700;
   font-size: clamp(1.8rem, 2.6vw, 2.25rem);
-  letter-spacing: 0.02em;
+  letter-spacing: 0.04em;
 
   color: inherit;
   text-decoration: none;
