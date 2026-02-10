@@ -54,11 +54,13 @@
     inset 0 1px 0 rgba(255, 255, 255, 0.6);
 }
 
+/* LABELS — make Shrikhand breathe */
 .blockTitle {
-  font-family: "Yatra One", cursive;
-  font-size: 2.05rem;
-  letter-spacing: 0.08em;
-  margin-bottom: 1.3rem;
+  font-family: "Shrikhand", cursive;
+  font-size: 2.1rem;
+  letter-spacing: 0.06em;
+  line-height: 1.25;
+  margin-bottom: 1.5rem;
 }
 
 .list {
@@ -118,6 +120,7 @@
   letter-spacing: 0.04em;
 }
 
+/* NUMBERS → sexy font */
 .cartToggleCount {
   display: inline-flex;
   align-items: center;
@@ -129,7 +132,7 @@
   background: rgba(255, 255, 255, 0.16);
   border: 1px solid rgba(255, 255, 255, 0.22);
   font-size: 0.95rem;
-  font-family: "Fredoka One", cursive;
+  font-family: "Rakkas", cursive;
 }
 
 .cart {
@@ -145,6 +148,7 @@
   border: 1px solid rgba(26, 18, 12, 0.06);
 }
 
+/* QUOTES / emphasis */
 .cartTitle {
   font-family: "Rakkas", cursive;
   font-size: 1.35rem;
