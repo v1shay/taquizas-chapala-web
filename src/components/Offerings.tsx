@@ -103,6 +103,38 @@ export default function Offerings() {
 
   return (
     <section className={styles.section} id="menu" aria-labelledby="menu-title">
+      {/* Papel picado decorative banner */}
+      <svg
+        className={styles.papelPicado}
+        viewBox="0 0 1200 64"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+      >
+        <defs>
+          <pattern id="pp-scallop" x="0" y="0" width="60" height="64" patternUnits="userSpaceOnUse">
+            {/* Main scallop arches */}
+            <path d="M0 0 L15 0 Q15 22 0 22 Z" fill="rgba(180,60,30,0.22)" />
+            <path d="M15 0 L30 0 L30 26 Q22 34 15 26 Z" fill="rgba(204,85,50,0.18)" />
+            <path d="M30 0 L45 0 Q45 22 30 22 Z" fill="rgba(180,60,30,0.22)" />
+            <path d="M45 0 L60 0 L60 26 Q52 34 45 26 Z" fill="rgba(204,85,50,0.18)" />
+            {/* Hanging triangular flags */}
+            <polygon points="7,24 12,40 2,40" fill="rgba(180,60,30,0.10)" />
+            <polygon points="22,28 28,46 16,46" fill="rgba(230,140,60,0.08)" />
+            <polygon points="37,24 42,40 32,40" fill="rgba(180,60,30,0.10)" />
+            <polygon points="52,28 58,46 46,46" fill="rgba(230,140,60,0.08)" />
+            {/* Decorative cut-out dots */}
+            <circle cx="7" cy="10" r="3" fill="rgba(26,18,12,0.10)" />
+            <circle cx="22" cy="12" r="3.5" fill="rgba(26,18,12,0.10)" />
+            <circle cx="37" cy="10" r="3" fill="rgba(26,18,12,0.10)" />
+            <circle cx="52" cy="12" r="3.5" fill="rgba(26,18,12,0.10)" />
+            {/* Diamond cut-outs */}
+            <polygon points="7,30 10,34 7,38 4,34" fill="rgba(204,85,50,0.08)" />
+            <polygon points="37,30 40,34 37,38 34,34" fill="rgba(204,85,50,0.08)" />
+          </pattern>
+        </defs>
+        <rect width="1200" height="64" fill="url(#pp-scallop)" />
+      </svg>
+
       <div className={styles.inner}>
         <motion.header className={styles.header} {...fadeUp}>
           <h2 className={styles.title} id="menu-title">
