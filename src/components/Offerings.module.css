@@ -23,12 +23,14 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 48px;
+  height: 64px;
   background:
-    /* scallop cut-out shapes */
-    radial-gradient(circle at 16px 0, transparent 14px, rgba(26, 18, 12, 0.06) 14px, rgba(26, 18, 12, 0.06) 16px, transparent 16px),
-    radial-gradient(circle at 48px 0, transparent 14px, rgba(26, 18, 12, 0.06) 14px, rgba(26, 18, 12, 0.06) 16px, transparent 16px);
-  background-size: 64px 48px;
+    /* scallop cut-out shapes — doubled up for boldness */
+    radial-gradient(circle at 16px 0, transparent 12px, rgba(180, 60, 30, 0.18) 12px, rgba(180, 60, 30, 0.18) 15px, transparent 15px),
+    radial-gradient(circle at 48px 0, transparent 12px, rgba(180, 60, 30, 0.18) 12px, rgba(180, 60, 30, 0.18) 15px, transparent 15px),
+    radial-gradient(circle at 16px 0, transparent 16px, rgba(26, 18, 12, 0.06) 16px, rgba(26, 18, 12, 0.06) 18px, transparent 18px),
+    radial-gradient(circle at 48px 0, transparent 16px, rgba(26, 18, 12, 0.06) 16px, rgba(26, 18, 12, 0.06) 18px, transparent 18px);
+  background-size: 64px 64px;
   background-repeat: repeat-x;
   z-index: 1;
   pointer-events: none;
@@ -42,30 +44,42 @@
   pointer-events: none;
   z-index: 0;
   background-image:
-    /* top-left corner rosette */
-    radial-gradient(circle at 5% 8%, rgba(204, 85, 50, 0.08) 0%, transparent 18%),
-    radial-gradient(circle at 6% 9%, rgba(204, 85, 50, 0.05) 0%, transparent 12%),
-    /* top-right corner rosette */
-    radial-gradient(circle at 95% 8%, rgba(204, 85, 50, 0.08) 0%, transparent 18%),
-    radial-gradient(circle at 94% 9%, rgba(204, 85, 50, 0.05) 0%, transparent 12%),
+    /* top-left corner rosette — bolder */
+    radial-gradient(circle at 4% 6%, rgba(180, 60, 30, 0.18) 0%, transparent 20%),
+    radial-gradient(circle at 5% 7%, rgba(204, 85, 50, 0.12) 0%, transparent 16%),
+    radial-gradient(circle at 3% 10%, rgba(230, 140, 60, 0.08) 0%, transparent 22%),
+    /* top-right corner rosette — bolder */
+    radial-gradient(circle at 96% 6%, rgba(180, 60, 30, 0.18) 0%, transparent 20%),
+    radial-gradient(circle at 95% 7%, rgba(204, 85, 50, 0.12) 0%, transparent 16%),
+    radial-gradient(circle at 97% 10%, rgba(230, 140, 60, 0.08) 0%, transparent 22%),
     /* bottom-left */
-    radial-gradient(circle at 4% 92%, rgba(204, 85, 50, 0.06) 0%, transparent 15%),
+    radial-gradient(circle at 3% 92%, rgba(180, 60, 30, 0.14) 0%, transparent 18%),
+    radial-gradient(circle at 5% 94%, rgba(204, 85, 50, 0.08) 0%, transparent 14%),
     /* bottom-right */
-    radial-gradient(circle at 96% 92%, rgba(204, 85, 50, 0.06) 0%, transparent 15%),
-    /* repeating diamond tile pattern across full section */
+    radial-gradient(circle at 97% 92%, rgba(180, 60, 30, 0.14) 0%, transparent 18%),
+    radial-gradient(circle at 95% 94%, rgba(204, 85, 50, 0.08) 0%, transparent 14%),
+    /* repeating diamond tile pattern — more visible */
     repeating-linear-gradient(
       45deg,
       transparent 0px,
-      transparent 28px,
-      rgba(26, 18, 12, 0.018) 28px,
-      rgba(26, 18, 12, 0.018) 30px
+      transparent 24px,
+      rgba(180, 60, 30, 0.045) 24px,
+      rgba(180, 60, 30, 0.045) 26px
     ),
     repeating-linear-gradient(
       -45deg,
       transparent 0px,
-      transparent 28px,
-      rgba(26, 18, 12, 0.018) 28px,
-      rgba(26, 18, 12, 0.018) 30px
+      transparent 24px,
+      rgba(180, 60, 30, 0.045) 24px,
+      rgba(180, 60, 30, 0.045) 26px
+    ),
+    /* secondary cross-hatch for texture */
+    repeating-linear-gradient(
+      90deg,
+      transparent 0px,
+      transparent 48px,
+      rgba(26, 18, 12, 0.02) 48px,
+      rgba(26, 18, 12, 0.02) 50px
     );
 }
 
@@ -75,10 +89,10 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 52px;
+  height: 64px;
   z-index: 1;
   pointer-events: none;
-  opacity: 0.85;
+  opacity: 1;
 }
 
 .inner {

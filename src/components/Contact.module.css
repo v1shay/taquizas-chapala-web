@@ -20,24 +20,41 @@
   pointer-events: none;
   z-index: 0;
   background-image:
-    /* Large warm terracotta corner glow — top-left */
-    radial-gradient(ellipse at 0% 0%, rgba(204, 107, 60, 0.07) 0%, transparent 45%),
-    /* Large warm terracotta corner glow — bottom-right */
-    radial-gradient(ellipse at 100% 100%, rgba(204, 107, 60, 0.07) 0%, transparent 45%),
-    /* Repeating step-fret (grecas) inspired lines */
+    /* Large warm terracotta corner glow — top-left — much bolder */
+    radial-gradient(ellipse at 0% 0%, rgba(180, 60, 30, 0.16) 0%, rgba(204, 107, 60, 0.08) 30%, transparent 55%),
+    /* Large warm terracotta corner glow — bottom-right — much bolder */
+    radial-gradient(ellipse at 100% 100%, rgba(180, 60, 30, 0.16) 0%, rgba(204, 107, 60, 0.08) 30%, transparent 55%),
+    /* Subtle center warmth */
+    radial-gradient(ellipse at 50% 50%, rgba(230, 140, 60, 0.04) 0%, transparent 60%),
+    /* Repeating step-fret (grecas) inspired grid — more visible */
     repeating-linear-gradient(
       0deg,
       transparent 0px,
-      transparent 60px,
-      rgba(26, 18, 12, 0.022) 60px,
-      rgba(26, 18, 12, 0.022) 62px
+      transparent 48px,
+      rgba(180, 60, 30, 0.055) 48px,
+      rgba(180, 60, 30, 0.055) 50px
     ),
     repeating-linear-gradient(
       90deg,
       transparent 0px,
-      transparent 60px,
-      rgba(26, 18, 12, 0.022) 60px,
-      rgba(26, 18, 12, 0.022) 62px
+      transparent 48px,
+      rgba(180, 60, 30, 0.055) 48px,
+      rgba(180, 60, 30, 0.055) 50px
+    ),
+    /* Diagonal cross-hatch overlay */
+    repeating-linear-gradient(
+      45deg,
+      transparent 0px,
+      transparent 32px,
+      rgba(26, 18, 12, 0.025) 32px,
+      rgba(26, 18, 12, 0.025) 34px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      transparent 0px,
+      transparent 32px,
+      rgba(26, 18, 12, 0.025) 32px,
+      rgba(26, 18, 12, 0.025) 34px
     );
 }
 
@@ -48,26 +65,38 @@
   bottom: 0;
   left: 0;
   right: 0;
-  height: 40px;
+  height: 56px;
   pointer-events: none;
   z-index: 0;
   background:
-    radial-gradient(circle at 20px 40px, transparent 14px, rgba(26, 18, 12, 0.04) 14px, rgba(26, 18, 12, 0.04) 16px, transparent 16px),
-    radial-gradient(circle at 52px 40px, transparent 14px, rgba(26, 18, 12, 0.04) 14px, rgba(26, 18, 12, 0.04) 16px, transparent 16px);
-  background-size: 64px 40px;
+    radial-gradient(circle at 20px 56px, transparent 12px, rgba(180, 60, 30, 0.14) 12px, rgba(180, 60, 30, 0.14) 15px, transparent 15px),
+    radial-gradient(circle at 52px 56px, transparent 12px, rgba(180, 60, 30, 0.14) 12px, rgba(180, 60, 30, 0.14) 15px, transparent 15px),
+    radial-gradient(circle at 20px 56px, transparent 16px, rgba(26, 18, 12, 0.05) 16px, rgba(26, 18, 12, 0.05) 18px, transparent 18px),
+    radial-gradient(circle at 52px 56px, transparent 16px, rgba(26, 18, 12, 0.05) 16px, rgba(26, 18, 12, 0.05) 18px, transparent 18px);
+  background-size: 64px 56px;
   background-repeat: repeat-x;
 }
 
-/* ===== GRECAS SVG BORDER ===== */
-.grecas {
+/* ===== GRECAS SVG BORDERS ===== */
+.grecasTop {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 28px;
+  height: 44px;
   z-index: 1;
   pointer-events: none;
-  opacity: 0.9;
+}
+
+.grecasBottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 44px;
+  z-index: 1;
+  pointer-events: none;
+  transform: scaleY(-1);
 }
 
 .inner {
