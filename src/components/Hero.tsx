@@ -6,9 +6,16 @@ import styles from "./Hero.module.css";
 export default function Hero() {
   return (
     <section className={styles.hero}>
-      <div className={styles.layout}>
+      {/* FULL-SCREEN VIDEO BACKGROUND */}
+      <div className={styles.videoBg}>
+        <video autoPlay muted loop playsInline>
+          <source src="/landing-page.MOV" />
+        </video>
+        <div className={styles.overlay} />
+      </div>
 
-        {/* LEFT — TEXT */}
+      {/* CENTERED TEXT */}
+      <div className={styles.content}>
         <motion.div
           className={styles.textBlock}
           initial={{ opacity: 0, y: 40 }}
@@ -45,21 +52,6 @@ export default function Hero() {
             Authentic Mexican taco catering for unforgettable events
           </motion.p>
         </motion.div>
-
-        {/* RIGHT — VIDEO CUTOUT */}
-        <motion.div
-          className={styles.videoWrap}
-          initial={{ opacity: 0, scale: 1.05 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-        >
-          <div className={styles.videoMask}>
-            <video autoPlay muted loop playsInline>
-              <source src="/landing-page.MOV" />
-            </video>
-          </div>
-        </motion.div>
-
       </div>
     </section>
   );

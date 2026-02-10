@@ -24,126 +24,90 @@
 }
 
 /* =========================
-   HERO BACKGROUND
+   HERO — VIDEO BACKGROUND
    ========================= */
 
 .hero {
-  min-height: 100vh;
-  background:
-    radial-gradient(
-      800px 600px at 28% 45%,
-      rgba(255, 190, 140, 0.9),
-      transparent 65%
-    ),
-    radial-gradient(
-      900px 650px at 78% 70%,
-      rgba(255, 145, 100, 0.6),
-      transparent 60%
-    ),
-    radial-gradient(
-      1200px 900px at 50% 50%,
-      #ffb07a 0%,
-      #ff9568 42%,
-      #f06b5b 70%,
-      #e05848 100%
-    );
-  overflow: hidden;
-}
-
-/* =========================
-   LAYOUT
-   ========================= */
-
-.layout {
-  max-width: 1400px;
-  margin: 0 auto;
-  min-height: 100vh;
-
-  display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  align-items: center;
-  padding: 0 6rem;
-}
-
-/* =========================
-   LEFT TEXT BLOCK
-   ========================= */
-
-.textBlock {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1.9rem;
-}
-
-/* Kicker — understated, crafted */
-.kicker {
-  font-family: "DMSerif", serif;
-  font-size: 0.75rem;
-  letter-spacing: 0.38em;
-  text-transform: uppercase;
-  opacity: 0.9;
-}
-
-/* Main Title — CULTURAL */
-.title {
-  font-family: "ElGrosa", serif;
-  font-size: clamp(5rem, 7.2vw, 7.6rem);
-  line-height: 0.9;
-  letter-spacing: 0.03em;
-}
-
-/* Tagline — matches menu body text */
-.tagline {
-  font-family: "Corben", serif;
-  font-size: 1.18rem;
-  line-height: 1.65;
-  max-width: 480px;
-  opacity: 0.95;
-}
-
-/* =========================
-   RIGHT VIDEO PORTAL
-   ========================= */
-
-.videoWrap {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  height: 100vh;
-}
-
-/* DIN TAI FUNG–STYLE DOORWAY */
-.videoMask {
-  width: 480px;
-  height: 88vh;
-
-  /* doorway geometry */
-  border-radius: 52% 52% 0 0 / 78% 78% 0 0;
-
-  overflow: hidden;
   position: relative;
-
-  transform: translateY(0);
-  box-shadow: 0 80px 160px rgba(0, 0, 0, 0.38);
+  height: 100vh;
+  overflow: hidden;
 }
 
-/* video fill */
-.videoMask video {
+/* Full-bleed video */
+.videoBg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.videoBg video {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-/* inner depth */
-.videoMask::after {
-  content: "";
+/* Dark overlay for text readability */
+.overlay {
   position: absolute;
   inset: 0;
-  box-shadow:
-    inset 0 -90px 100px rgba(0, 0, 0, 0.35),
-    inset 0 40px 70px rgba(0, 0, 0, 0.18);
-  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.55) 0%,
+    rgba(0, 0, 0, 0.35) 40%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+}
+
+/* =========================
+   CONTENT — CENTERED TEXT
+   ========================= */
+
+.content {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2.5rem;
+}
+
+.textBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.9rem;
+  color: #fff;
+}
+
+/* Kicker */
+.kicker {
+  font-family: "DMSerif", serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+  opacity: 0.88;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Main Title */
+.title {
+  font-family: "ElGrosa", serif;
+  font-size: clamp(5rem, 7.2vw, 7.6rem);
+  line-height: 0.9;
+  letter-spacing: 0.03em;
+  text-shadow: 0 4px 30px rgba(0, 0, 0, 0.45);
+}
+
+/* Tagline — matches menu body text (Corben) */
+.tagline {
+  font-family: "Corben", serif;
+  font-size: 1.18rem;
+  line-height: 1.65;
+  max-width: 520px;
+  opacity: 0.92;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
 }
 
 /* =========================
@@ -151,13 +115,8 @@
    ========================= */
 
 @media (max-width: 900px) {
-  .layout {
-    grid-template-columns: 1fr;
-    padding: 0 2rem;
-  }
-
-  .videoWrap {
-    display: none;
+  .content {
+    padding: 0 1.5rem;
   }
 
   .title {

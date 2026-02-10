@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Shrikhand&family=Rakkas&family=Corben:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Corben:wght@400;700&display=swap");
 
 .section {
   background: #fffaf3;
@@ -27,7 +27,8 @@
 }
 
 .title {
-  font-family: "Shrikhand", cursive;
+  font-family: "Corben", serif;
+  font-weight: 700;
   font-size: clamp(2.2rem, 3.2vw, 3rem);
   line-height: 1.15;
   letter-spacing: 0.03em;
@@ -61,7 +62,8 @@
   display: inline-block;
   margin-top: 0.9rem;
 
-  font-family: "Rakkas", cursive;
+  font-family: "Corben", serif;
+  font-weight: 700;
   font-size: clamp(1.8rem, 2.6vw, 2.25rem);
   letter-spacing: 0.04em;
 
