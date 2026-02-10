@@ -103,6 +103,30 @@ export default function Offerings() {
 
   return (
     <section className={styles.section} id="menu" aria-labelledby="menu-title">
+      {/* Papel picado decorative banner */}
+      <svg
+        className={styles.papelPicado}
+        viewBox="0 0 1200 52"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+      >
+        <defs>
+          <pattern id="pp-scallop" x="0" y="0" width="60" height="52" patternUnits="userSpaceOnUse">
+            <path d="M0 0 L15 0 Q15 18 0 18 Z" fill="rgba(204,85,50,0.12)" />
+            <path d="M15 0 L30 0 L30 22 Q22 28 15 22 Z" fill="rgba(230,140,60,0.10)" />
+            <path d="M30 0 L45 0 Q45 18 30 18 Z" fill="rgba(204,85,50,0.12)" />
+            <path d="M45 0 L60 0 L60 22 Q52 28 45 22 Z" fill="rgba(230,140,60,0.10)" />
+            <circle cx="7" cy="8" r="2" fill="rgba(26,18,12,0.06)" />
+            <circle cx="22" cy="10" r="2.5" fill="rgba(26,18,12,0.06)" />
+            <circle cx="37" cy="8" r="2" fill="rgba(26,18,12,0.06)" />
+            <circle cx="52" cy="10" r="2.5" fill="rgba(26,18,12,0.06)" />
+            <rect x="12" y="14" width="6" height="1" rx="0.5" fill="rgba(26,18,12,0.04)" />
+            <rect x="42" y="14" width="6" height="1" rx="0.5" fill="rgba(26,18,12,0.04)" />
+          </pattern>
+        </defs>
+        <rect width="1200" height="52" fill="url(#pp-scallop)" />
+      </svg>
+
       <div className={styles.inner}>
         <motion.header className={styles.header} {...fadeUp}>
           <h2 className={styles.title} id="menu-title">

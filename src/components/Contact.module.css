@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap");
 
 .section {
+  position: relative;
   background: #fffaf3;
   color: #1a120c;
   padding: 5.5rem 0 7rem;
@@ -8,9 +9,70 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+}
+
+/* ===== MEXICAN TILE PATTERN BACKGROUND ===== */
+.section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    /* Large warm terracotta corner glow — top-left */
+    radial-gradient(ellipse at 0% 0%, rgba(204, 107, 60, 0.07) 0%, transparent 45%),
+    /* Large warm terracotta corner glow — bottom-right */
+    radial-gradient(ellipse at 100% 100%, rgba(204, 107, 60, 0.07) 0%, transparent 45%),
+    /* Repeating step-fret (grecas) inspired lines */
+    repeating-linear-gradient(
+      0deg,
+      transparent 0px,
+      transparent 60px,
+      rgba(26, 18, 12, 0.022) 60px,
+      rgba(26, 18, 12, 0.022) 62px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent 0px,
+      transparent 60px,
+      rgba(26, 18, 12, 0.022) 60px,
+      rgba(26, 18, 12, 0.022) 62px
+    );
+}
+
+/* ===== PAPEL PICADO SCALLOP BORDER (BOTTOM) ===== */
+.section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(circle at 20px 40px, transparent 14px, rgba(26, 18, 12, 0.04) 14px, rgba(26, 18, 12, 0.04) 16px, transparent 16px),
+    radial-gradient(circle at 52px 40px, transparent 14px, rgba(26, 18, 12, 0.04) 14px, rgba(26, 18, 12, 0.04) 16px, transparent 16px);
+  background-size: 64px 40px;
+  background-repeat: repeat-x;
+}
+
+/* ===== GRECAS SVG BORDER ===== */
+.grecas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 28px;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.9;
 }
 
 .inner {
+  position: relative;
+  z-index: 1;
   max-width: 1000px;
   width: 100%;
   margin: 0 auto;
