@@ -28,7 +28,7 @@
 
 /* TITLE — same font as TAQUIZAS */
 .title {
-  font-family: "Cinzel", serif;
+  font-family: "Rakkas", serif;
   font-weight: 700;
   font-size: clamp(2.2rem, 3.2vw, 3rem);
   line-height: 1.15;
