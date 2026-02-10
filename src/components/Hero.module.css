@@ -2,6 +2,8 @@
    FONT IMPORTS (REAL, LOADED)
    ========================= */
 
+@import url("https://fonts.googleapis.com/css2?family=Corben:wght@400;700&display=swap");
+
 @font-face {
   font-family: "ElGrosa";
   src: url("/fonts/ElGrosa-Regular.woff2") format("woff2"),
@@ -91,10 +93,11 @@
   letter-spacing: 0.03em;
 }
 
-/* Tagline — bold Mexican contrast */
+/* Tagline — matches menu body text */
 .tagline {
-  font-family: "AbrilFatface", serif;
-  font-size: 1.35rem;
+  font-family: "Corben", serif;
+  font-size: 1.18rem;
+  line-height: 1.65;
   max-width: 480px;
   opacity: 0.95;
 }

@@ -4,6 +4,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html, body {
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display",
                "Inter", system-ui, sans-serif;
@@ -13,4 +17,19 @@ html, body {
 
 body {
   overflow-x: hidden;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
+/* Global snap scroll for all top-level sections */
+body > main > section,
+body > section {
+  scroll-snap-align: start;
+  min-height: 100vh;
+}
+
+@media (max-width: 960px) {
+  body {
+    scroll-snap-type: none;
+  }
 }
