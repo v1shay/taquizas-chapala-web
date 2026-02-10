@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&family=Fredoka+One&family=Yatra+One&family=Rakkas&family=Corben:wght@400;700&display=swap");
+
 .section {
   background: linear-gradient(
     180deg,
@@ -22,16 +24,17 @@
 }
 
 .title {
-  font-family: "ElGrosa", serif;
-  font-size: clamp(3.2rem, 5.5vw, 5rem);
-  letter-spacing: 0.04em;
+  font-family: "Shrikhand", cursive;
+  font-size: clamp(3.4rem, 5.8vw, 5.2rem);
+  letter-spacing: 0.06em;
 }
 
 .subheader {
   max-width: 52rem;
   margin: 1.2rem auto 0;
-  font-family: "DMSerif", serif;
+  font-family: "Corben", serif;
   font-size: 1.15rem;
+  line-height: 1.6;
   opacity: 0.9;
 }
 
@@ -52,8 +55,8 @@
 }
 
 .blockTitle {
-  font-family: "AbrilFatface", serif;
-  font-size: 2rem;
+  font-family: "Yatra One", cursive;
+  font-size: 2.05rem;
   letter-spacing: 0.08em;
   margin-bottom: 1.3rem;
 }
@@ -68,7 +71,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: "DMSerif", serif;
+  font-family: "Corben", serif;
   font-size: 1.05rem;
 }
 
@@ -77,11 +80,12 @@
   color: #fff;
   border: none;
   border-radius: 999px;
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
   cursor: pointer;
   font-size: 18px;
   line-height: 1;
+  font-family: "Fredoka One", cursive;
 }
 
 .addBtn:hover {
@@ -99,26 +103,19 @@
   display: inline-flex;
   align-items: center;
   gap: 0.65rem;
-
   background: rgba(26, 18, 12, 0.92);
   color: #fff;
   border: none;
   border-radius: 999px;
   padding: 0.7rem 0.9rem;
   cursor: pointer;
-
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
-}
-
-.cartToggle:focus-visible {
-  outline: 2px solid rgba(240, 107, 91, 0.55);
-  outline-offset: 3px;
+  font-family: "Fredoka One", cursive;
 }
 
 .cartToggleLabel {
-  font-family: "DMSerif", serif;
   font-size: 0.95rem;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.04em;
 }
 
 .cartToggleCount {
@@ -127,63 +124,35 @@
   justify-content: center;
   min-width: 34px;
   height: 28px;
-
   border-radius: 999px;
   padding: 0 0.55rem;
-
   background: rgba(255, 255, 255, 0.16);
   border: 1px solid rgba(255, 255, 255, 0.22);
-
-  font-family: "DMSerif", serif;
   font-size: 0.95rem;
+  font-family: "Fredoka One", cursive;
 }
 
 .cart {
   position: absolute;
   top: calc(100% + 12px);
   right: 0;
-
   width: 320px;
   max-width: calc(100vw - 48px);
-
   background: rgba(255, 255, 255, 0.95);
   border-radius: 20px;
   padding: 1.2rem 1.2rem 1.1rem;
-
   box-shadow: 0 24px 64px rgba(0, 0, 0, 0.18);
   border: 1px solid rgba(26, 18, 12, 0.06);
 }
 
-.cartHeader {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem;
-  margin-bottom: 0.8rem;
-}
-
 .cartTitle {
-  font-family: "AbrilFatface", serif;
-  font-size: 1.3rem;
+  font-family: "Rakkas", cursive;
+  font-size: 1.35rem;
   margin: 0;
 }
 
-.cartClose {
-  background: transparent;
-  border: 1px solid rgba(26, 18, 12, 0.12);
-  color: rgba(26, 18, 12, 0.85);
-  border-radius: 999px;
-  padding: 0.35rem 0.65rem;
-  cursor: pointer;
-  font-family: "DMSerif", serif;
-}
-
-.cartClose:hover {
-  background: rgba(26, 18, 12, 0.04);
-}
-
 .cartEmpty {
-  font-family: "DMSerif", serif;
+  font-family: "Corben", serif;
   opacity: 0.6;
 }
 
@@ -199,16 +168,10 @@
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
-
-  font-family: "DMSerif", serif;
+  font-family: "Corben", serif;
   font-size: 0.98rem;
-
-  padding: 0.45rem 0.45rem;
+  padding: 0.45rem;
   border-radius: 14px;
-}
-
-.cartRow:hover {
-  background: rgba(26, 18, 12, 0.03);
 }
 
 .cartItemName {
@@ -221,12 +184,7 @@
   border-radius: 999px;
   padding: 0.3rem 0.55rem;
   cursor: pointer;
-  font-family: "DMSerif", serif;
-  color: rgba(26, 18, 12, 0.88);
-}
-
-.cartRemoveBtn:hover {
-  background: rgba(26, 18, 12, 0.04);
+  font-family: "Fredoka One", cursive;
 }
 
 .cartFooter {
@@ -243,13 +201,7 @@
   border-radius: 999px;
   padding: 0.5rem 0.8rem;
   cursor: pointer;
-  font-family: "DMSerif", serif;
-  color: rgba(26, 18, 12, 0.9);
-}
-
-.cartClearBtn:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
+  font-family: "Fredoka One", cursive;
 }
 
 .cartCta {
@@ -258,12 +210,8 @@
   color: #fff;
   border-radius: 999px;
   padding: 0.55rem 0.9rem;
-  font-family: "DMSerif", serif;
+  font-family: "Fredoka One", cursive;
   box-shadow: 0 10px 26px rgba(240, 107, 91, 0.22);
-}
-
-.cartCta:hover {
-  background: rgba(240, 107, 91, 1);
 }
 
 @media (max-width: 960px) {
