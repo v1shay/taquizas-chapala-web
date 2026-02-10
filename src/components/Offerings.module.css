@@ -174,7 +174,7 @@
 /* ===== CART ===== */
 .cartDock {
   position: fixed;
-  top: 24px;
+  top: 88px;
   right: 24px;
   z-index: 1000;
 }
@@ -301,7 +301,7 @@
 
   .cartDock {
     top: auto;
-    bottom: 18px;
-    right: 18px;
+    bottom: 20px;
+    right: 16px;
   }
 }

@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useCallback } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import styles from "./Navbar.module.css";
 
 export default function Navbar() {
@@ -42,7 +43,14 @@ export default function Navbar() {
           onClick={scrollToTop}
           aria-label="Scroll to top"
         >
-          Chapala
+          <Image
+            src="/images/logo.png"
+            alt="Taquizas Estilo Chapala logo"
+            width={52}
+            height={52}
+            className={styles.logo}
+            priority
+          />
         </button>
 
         <div className={styles.links}>
